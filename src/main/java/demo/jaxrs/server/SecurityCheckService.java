@@ -243,7 +243,7 @@ public class SecurityCheckService {
             Utils.copyDirectory(new File(source), new File(destination));
             output = "File copied successfully";
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             output = "Error occurred while copying file. Reason: " + e.getMessage();
             logger.error(output, e);
         }
